@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetExternalpAddress", "GetExternalpAddress\GetExternalpAddress.csproj", "{C0C44BF0-E2E9-40DE-8F80-8EB6C98B655E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0C44BF0-E2E9-40DE-8F80-8EB6C98B655E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C44BF0-E2E9-40DE-8F80-8EB6C98B655E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0C44BF0-E2E9-40DE-8F80-8EB6C98B655E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C44BF0-E2E9-40DE-8F80-8EB6C98B655E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4415F65-B4ED-427D-97C8-844E0DA05AF8}
+	EndGlobalSection
+EndGlobal
