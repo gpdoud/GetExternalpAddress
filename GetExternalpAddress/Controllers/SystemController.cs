@@ -12,8 +12,9 @@ namespace GetExternalpAddress.Controllers {
     public class SystemController : ControllerBase {
 
         [HttpGet("/")]
-        public IActionResult GetIp() {
-            return new JsonResult(new { ip = Request.HttpContext.Connection.RemoteIpAddress.ToString() });
+        public ActionResult GetIp() {
+            var ip = Request.HttpContext.Connection.RemoteIpAddress.ToString();
+            return new OkObjectResult(new { ip });
         }
     }
 }

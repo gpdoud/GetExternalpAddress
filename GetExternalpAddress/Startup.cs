@@ -17,10 +17,20 @@ namespace GetExternalpAddress {
         }
 
         public IConfiguration Configuration { get; }
+        private readonly string CorsPolicy = "_corsPolicy";
+        private readonly string[] AllowedOrigins = {
+            // add http and https protocols
+            "http://127.0.0.1:5000", "https://127.0.0.1:5000"
+        };
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) {
             services.AddControllers();
+            services.AddCors(x => x.AddPolicy(CorsPolicy, p => {
+                p.WithOrigins(AllowedOrigins)
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+            }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -28,6 +38,8 @@ namespace GetExternalpAddress {
             if(env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(CorsPolicy);
 
             app.UseRouting();
 
