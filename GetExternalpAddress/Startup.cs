@@ -39,7 +39,8 @@ namespace GetExternalpAddress {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors(CorsPolicy);
+            //app.UseCors(CorsPolicy);
+            app.UseCors(x => x.AllowAnyHeader().AllowAnyOrigin().AllowAnyHeader());
 
             app.UseRouting();
 
