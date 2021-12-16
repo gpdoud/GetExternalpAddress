@@ -27,7 +27,7 @@ namespace GetExternalpAddress {
         public void ConfigureServices(IServiceCollection services) {
             services.AddControllers();
             services.AddCors(x => x.AddPolicy(CorsPolicy, p => {
-                p.WithOrigins(AllowedOrigins)
+                    p.AllowAnyOrigin() //p.WithOrigins(AllowedOrigins)
                     .AllowAnyHeader()
                     .AllowAnyMethod();
             }));
